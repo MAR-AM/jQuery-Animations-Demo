@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations jQuery</title>
+    <style>
+        #animationBox {
+            width: 200px;
+            height: 100px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            margin: 50px auto;
+            border-radius: 10px;
+            position: relative;
+        }
+        .button-container {
+            text-align: center;
+            
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="animationBox">Animer moi!</div>
+    <div class="button-container">
+        <button id="slideDown">Glisser vers le bas</button>
+        <button id="slideUp">Glisser vers le haut</button>
+        <button id="fadeIn">Fondu en entrée</button>
+        <button id="fadeOut">Fondu en sortie</button>
+        <button id="animate">Animer</button>
+        
+        
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function() {
+    
+    $("#slideDown").click(function() {
+        $("#animationBox").slideDown("slow");
+    });
+
+    
+    $("#slideUp").click(function() {
+        $("#animationBox").slideUp("fast");
+    });
+
+    
+    $("#fadeIn").click(function() {
+        $("#animationBox").fadeIn("slow");
+    });
+
+    
+    $("#fadeOut").click(function() {
+        $("#animationBox").fadeOut("slow");
+    });
+
+    
+    $("#animate").click(function() {
+        $("#animationBox").animate({
+            left: '250px',
+            opacity:'0.2',
+            height: '+=150px',
+            width:"300px",
+        }, 1000);
+    });
+    
+
+    $("#animate").click(function() {
+        $("#animationBox").css("background-color", "#e74c3c");
+        });
+
+   
+});
+
+
+    </script>
+</body>
+</html>
